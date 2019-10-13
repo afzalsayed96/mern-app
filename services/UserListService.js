@@ -1,6 +1,6 @@
 import axios from 'axios';
 const UserList = data => (
-    axios.get('http://localhost:3000/users/all', data)
+    axios.get(process.env.API_URL + 'users/all', data)
         .then(res => res.data)
         .then(data => data)
         .catch(err => console.log(err))

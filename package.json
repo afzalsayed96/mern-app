@@ -23,7 +23,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.7.4",
-    "mongoose-sequence": "^5.2.2"
+    "mongoose-sequence": "^5.2.2",
+    "cross-env": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
@@ -33,7 +34,6 @@
     "jest": "24.1.0",
     "react-addons-test-utils": "15.6.2",
     "react-router": "^5.1.2",
-    "react-test-renderer": "16.10.2",
-    "cross-env": "^5.2.0"
+    "react-test-renderer": "16.10.2"
   }
 }
