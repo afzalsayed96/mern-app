@@ -1,0 +1,146 @@
+@font-face {
+font-family: 'Product Sans Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Regular'), url('fonts/ProductSans-Regular.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Italic'), url('fonts/ProductSans-Italic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Thin Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Thin Regular'), url('fonts/ProductSans-Thin.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Light Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Light Regular'), url('fonts/ProductSans-Light.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Medium Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Medium Regular'), url('fonts/ProductSans-Medium.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Black Regular';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Black Regular'), url('fonts/ProductSans-Black.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Thin Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Thin Italic'), url('fonts/ProductSans-ThinItalic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Light Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Light Italic'), url('fonts/ProductSans-LightItalic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Medium Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Medium Italic'), url('fonts/ProductSans-MediumItalic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Bold';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Bold'), url('fonts/ProductSans-Bold.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Bold Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Bold Italic'), url('fonts/ProductSans-BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Product Sans Black Italic';
+font-style: normal;
+font-weight: normal;
+src: local('Product Sans Black Italic'), url('fonts/ProductSans-BlackItalic.woff') format('woff');
+}
+
+/* Variables */
+:root {
+    --scrollbar-size: .375rem;
+    --scrollbar-minlength: 1.5rem; /* Minimum length of scrollbar thumb (width of horizontal, height of vertical) */
+    --scrollbar-ff-width: thin; /* FF-only accepts auto, thin, none */
+    --scrollbar-track-color: transparent;
+    --scrollbar-color: rgba(0,0,0,.2);
+    --scrollbar-color-hover: rgba(0,0,0,.3);
+    --scrollbar-color-active: rgba(0,0,0,.3);
+}
+
+/* Use .layout-scrollbar-obtrusive to only use overflow if scrollbars don’t overlay */
+.scrollbar-test,
+.layout-cell {
+    overscroll-behavior: contain;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: var(--scrollbar-ff-width);
+}
+
+/* This class controls what elements have the new fancy scrollbar CSS */
+.layout-scrollbar, .layout-scrollbar * {
+    scrollbar-color: var(--scrollbar-color) var(--scrollbar-track-color);
+}
+/* Only apply height/width to ::-webkit-scrollbar if is obtrusive */
+.layout-scrollbar-obtrusive .layout-scrollbar::-webkit-scrollbar, .layout-scrollbar-obtrusive .layout-scrollbar *::-webkit-scrollbar {
+    height: var(--scrollbar-size);
+    width: var(--scrollbar-size);
+}
+.layout-scrollbar::-webkit-scrollbar-track, .layout-scrollbar *::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+}
+.layout-scrollbar::-webkit-scrollbar-thumb, .layout-scrollbar *::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-color);
+    border-radius: 3px;
+}
+.layout-scrollbar::-webkit-scrollbar-thumb:hover, .layout-scrollbar *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-color-hover);
+}
+.layout-scrollbar::-webkit-scrollbar-thumb:active, .layout-scrollbar *::-webkit-scrollbar-thumb:active {
+    background-color: var(--scrollbar-color-active);
+}
+.scrollbar-test::-webkit-scrollbar-thumb:vertical,
+.layout-scrollbar::-webkit-scrollbar-thumb:vertical, .layout-scrollbar *::-webkit-scrollbar-thumb:vertical {
+    min-height: var(--scrollbar-minlength);
+}
+.scrollbar-test::-webkit-scrollbar-thumb:horizontal,
+.layout-scrollbar::-webkit-scrollbar-thumb:horizontal, .layout-scrollbar *::-webkit-scrollbar-thumb:horizontal {
+    min-width: var(--scrollbar-minlength);
+}
