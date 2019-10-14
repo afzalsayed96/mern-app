@@ -12,10 +12,19 @@ const config = require('./api/DB.js');
 const userRoutes = require('./api/route');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(config.DB, { useNewUrlParser: true }).then(
-    () => { console.log('Database is connected') },
-    err => { console.log('Can not connect to the database' + err) }
-);
+
+const connectWithRetry = () => {
+    mongoose.connect(config.DB, { useNewUrlParser: true }).then(
+        () => { console.log('Database is connected') },
+        err => {
+            console.log('Can not connect to the database' + err)
+            setTimeout(connectWithRetry, 5000)
+        }
+    );
+}
+
+connectWithRetry();
+
 app.prepare().then(() => {
 
     server.get('/', (req, res) => {
