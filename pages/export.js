@@ -24,6 +24,8 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     backgroundPosition: 'top center',
     padding: theme.spacing(2),
+    maxWidth: "100%",
+    overflow: "hidden"
   },
   imageLeft: {
     position: 'absolute',
@@ -49,13 +51,18 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column'
   },
   table: {
-    minWidth: 650,
+    width: "100%",
   },
   paper: {
     margin: '20px',
     position: 'relative',
-    zIndex: 2
+    zIndex: 2,
+    overflow: "auto"
   },
+  progress: {
+    position: "sticky",
+    left: "0"
+  }
 }));
 
 function desc(a, b, orderBy) {
@@ -170,7 +177,7 @@ export default function DataTable() {
         <Box my={4} className={classes.root}>
           <Paper className={classes.paper}>
             <EnhancedTableToolbar selected={selected} rows={rows} refresh={refresh} />
-            {loading && <LinearProgress />}
+            {loading && <LinearProgress className={classes.progress} />}
             <Table className={classes.table}>
               <EnhancedTableHead
                 classes={classes}

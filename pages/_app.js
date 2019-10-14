@@ -35,6 +35,7 @@ export default class MyApp extends App {
             overflow: auto;
             min-height: 100vh;
             position: relative;
+            overflow-x: hidden;
         }
       `}</style>
       </React.Fragment>
