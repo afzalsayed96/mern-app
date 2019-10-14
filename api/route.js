@@ -34,7 +34,7 @@ userRoutes.route('/login').post(function (req, res) {
             if (!user) res.sendStatus(204);
             else {
                 bcrypt.compare(req.body.password, user.password)
-                    .then(passwordMatch => passwordMatch ? res.sendStatus(200) : res.sendStatus(204))
+                    .then(passwordMatch => passwordMatch ? res.sendStatus(200) : res.sendStatus(403))
             }
         })
 });
