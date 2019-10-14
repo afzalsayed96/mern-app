@@ -62,7 +62,7 @@ docker-compose build test
 docker-compose run test
 ```
 
-## Started boilerplate
+## Starter boilerplate
 
 - Create Next App
 - https://github.com/mui-org/material-ui/tree/master/examples/nextjs
