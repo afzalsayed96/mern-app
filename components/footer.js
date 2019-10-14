@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
 export default function Footer() {
     const classes = useStyles();
     return (
+        // Obligatory made with ❤️ footer
         <footer className="footer">
             <Container maxWidth="sm" className={classes.container}>
                 <Divider variant="inset" />

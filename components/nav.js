@@ -1,14 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
 import { Divider } from '@material-ui/core'
+import { withRouter } from 'next/router'
 
-const Nav = () => (
+const Nav = ({ router }) => (
   <nav>
     <ul>
       <li>
-        <Link href='create'>
-          <a>Register</a>
-        </Link>
+        {router.pathname === "/login" || router.pathname === "/create" ?
+          <Link href='export'>
+            <a>Export</a>
+          </Link> :
+          <Link href='create'>
+            <a>Register</a>
+          </Link>
+        }
       </li>
       <li>
         <Link href='/'>
@@ -16,7 +22,7 @@ const Nav = () => (
         </Link>
       </li>
       <li>
-        <a href='https://github.com/afzalsayed96'>
+        <a href='https://github.com/afzalsayed96/next-app'>
           Github
         </a>
       </li>
@@ -57,4 +63,4 @@ const Nav = () => (
   </nav>
 )
 
-export default Nav
+export default withRouter(Nav)
