@@ -2,7 +2,7 @@
 
 The problem statement was to develop a web app using React and MongoDB that can perform user registration and user list action. I took this opportunity to try [Next.js](https://nextjs.org/) which is a React Framework with SSR and code splitting by default. It was also my first time working with MongoDB.
 
-## [Demo](https://node-next.herokuapp.com/)
+## [Demo](https://node-next.herokuapp.com/) 🥳🎉
 
 ## Directory structure
 
