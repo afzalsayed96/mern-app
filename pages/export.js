@@ -5,7 +5,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import { TableFooter, TablePagination } from '@material-ui/core';
+import { TableFooter, TablePagination, Typography } from '@material-ui/core';
 import UserList from '../services/UserListService'
 import Nav from '../components/nav'
 import Footer from '../components/footer';
@@ -41,6 +41,12 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center'
+  },
+  boxColumn: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    flexDirection: 'column'
   },
   table: {
     minWidth: 650,
@@ -149,7 +155,7 @@ export default function DataTable() {
   };
   const isSelected = id => selected.indexOf(id) !== -1;
 
-  const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+  const emptyRows = rows && rows.length ? rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage) : 0;
 
   return (
     <>
@@ -207,11 +213,20 @@ export default function DataTable() {
                       </TableRow>
                     );
                   })}
-                {emptyRows > 0 && (
-                  <TableRow style={{ height: 53 * emptyRows }}>
-                    <TableCell colSpan={6} />
+                {rows.length === 0 ?
+                  <TableRow style={{ height: 53 * rowsPerPage }}>
+                    <TableCell colSpan={6} >
+                      <Box className={classes.boxColumn}>
+                        <img src="/undraw_no_data.svg" height="240" />
+                        <Typography variant="body2" color="textSecondary" align="center">No data</Typography>
+                      </Box>
+                    </TableCell>
                   </TableRow>
-                )}
+                  : emptyRows > 0 && (
+                    <TableRow style={{ height: 53 * emptyRows }}>
+                      <TableCell colSpan={6} />
+                    </TableRow>
+                  )}
               </TableBody>
               <TableFooter>
                 <TableRow>

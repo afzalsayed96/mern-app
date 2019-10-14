@@ -91,7 +91,7 @@ export default function Create() {
   const handleSubmit = async () => {
     let errors = Object.values(state).some(state => !!state.error);
     let values = Object.values(state).every(state => !!state.value);
-    if (!errors && values) {
+    if (!loading && !errors && values) {
       const data = {
         username: state.username.value,
         email: state.email.value,
