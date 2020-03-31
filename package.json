@@ -14,7 +14,7 @@
     "@material-ui/styles": "^4.5.0",
     "axios": "^0.19.0",
     "clsx": "^1.0.4",
-    "next": "9.1.1",
+    "next": "9.3.2",
     "prop-types": "^15.7.2",
     "react": "16.10.2",
     "react-dom": "16.10.2",
