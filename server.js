@@ -8,8 +8,8 @@ const app = next({ dev })
 const handle = app.getRequestHandler();
 const cors = require('cors');
 const mongoose = require('mongoose');
-const config = require('./api/DB.js');
-const userRoutes = require('./api/route');
+const config = require('./src/api/DB.js');
+const userRoutes = require('./src/api/route');
 
 mongoose.Promise = global.Promise;
 

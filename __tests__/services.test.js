@@ -1,5 +1,5 @@
-import UserList from "../services/UserListService"
-import CsvDataService from "../services/CsvDataService"
+import UserList from "../src/services/UserListService"
+import CsvDataService from "../src/services/CsvDataService"
 
 describe('UserList() returns data', () => {
   it('should load user data', () => {
