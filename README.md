@@ -1,4 +1,4 @@
-<center><img src="public/mongodb.png" height="18px" style="vertical-align:sub">  <img src="public/express.png" height="18px" style="vertical-align:sub">  <img src="public/react.png" height="18px" style="vertical-align:sub">  <img src="public/nodejs.png" height="18px" style="vertical-align:sub"></center>
+<p align="center"><img src="public/mongodb.png" height="18px" style="vertical-align:sub">  <img src="public/express.png" height="18px" style="vertical-align:sub">  <img src="public/react.png" height="18px" style="vertical-align:sub">  <img src="public/nodejs.png" height="18px" style="vertical-align:sub">  <img src="public/react.png" height="18px" style="vertical-align:sub">  <img src="public/docker.png" height="18px" style="vertical-align:sub"></p>
 
 # MERN stack app using Next.js
 
