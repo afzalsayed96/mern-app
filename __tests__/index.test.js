@@ -2,7 +2,7 @@
 
 import { shallow } from 'enzyme'
 import React from 'react'
-import App from '../pages/index.js'
+import App from '../src/pages/index.js'
 
 describe('With Enzyme', () => {
   it('App renders landing image', () => {
